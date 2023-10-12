@@ -48,9 +48,9 @@ class Main
         System.out.println("His age: " + s.getAge());
         System.out.println("His roll: " + s.getRoll());
         
-        s.setName("Sumit");
-        s.setAge(24);
-        s.setRoll(15);
+        s.setName("Shivam");
+        s.setAge(20);
+        s.setRoll(21);
         
         // Displaying values of the variables
         System.out.println("His name: " + s.getName());
