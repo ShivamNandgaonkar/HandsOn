@@ -1,52 +1,38 @@
-package HandsOn;
-import java.util.ArrayList;
+package collection;
+import java.util.Stack;
+public class StackExample 
+{
+    public static void main(String[] args)
+    {
+        // Create a Stack to store strings
+        Stack<String> stack = new Stack<>();
 
-class Stack<T> {
-    private ArrayList<T> elements;
+        // Pushing elements onto the stack
+        stack.push("Java");
+        stack.push("Python");
+        stack.push("C++");
 
-    public Stack() {
-        elements = new ArrayList<>();
-    }
+        // Peeking at the top element (without removing it)
+        System.out.println("Top element: " + stack.peek());
 
-    public void push(T item) {
-        elements.add(item);
-    }
+        // Popping elements from the stack
+        System.out.println("Popped element: " + stack.pop());
+        System.out.println("Popped element: " + stack.pop());
 
-    public T pop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
-        return elements.remove(elements.size() - 1);
-    }
-
-    public boolean isEmpty() {
-        return elements.isEmpty();
-    }
-
-    public void display() {
-        for (int i = elements.size() - 1; i >= 0; i--) {
-            System.out.println(elements.get(i));
-        }
-    }
-}
-
-public class StackExample {
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-
-        System.out.println("Elements in the stack:");
-        stack.display();
-
-        System.out.println("Popped: " + stack.pop());
-        System.out.println("Popped: " + stack.pop());
-
+        // Check if the stack is empty
         System.out.println("Is stack empty? " + stack.isEmpty());
 
-        System.out.println("Elements in the stack:");
-        stack.display();
+        // Pushing more elements
+        stack.push("JavaScript");
+        stack.push("C#");
+        // Size of the stack
+        System.out.println("Stack size: " + stack.size());
+
+        // Pop elements until the stack is empty
+        System.out.println("Elements popped from the stack:");
+        while (!stack.isEmpty()) 
+        {
+            System.out.println(stack.pop());
+        }
     }
 }

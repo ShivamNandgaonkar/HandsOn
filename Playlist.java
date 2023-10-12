@@ -1,42 +1,26 @@
-package HandsOn;
-/*
-Create a program that represents a basic PlayList using a Vector to store song names. 
-sImplement methods to:
-a. Add songs to the PlayList.
-b. Display the current PlayList.
-c. Remove a song from the PlayList.
- */
+package collection;
 import java.util.Vector;
-public class Playlist
+public class Playlist 
 {
-    private Vector<String> songs;
-    public Playlist() 
-    {
-        songs = new Vector<>();
-    }
-    public void addSong(String song) 
-    {
-        songs.add(song);
-    }
-    public void displayPlaylist() 
-    {
-        for (String song : songs) 
-        {
-            System.out.println(song);
-        }
-    }
-    public void removeSong(String song) 
-    {
-        songs.remove(song);
-    }
-    public static void main(String[] args)
-    {
-        Playlist playlist = new Playlist();
-        playlist.addSong("Bohemian Rhapsody");
-        playlist.addSong("Stairway to Heaven");
-        playlist.addSong("Imagine");
-        playlist.displayPlaylist();
-        playlist.removeSong("Stairway to Heaven");
-        playlist.displayPlaylist();
-    }
-}
+	 private Vector<String> songs;
+
+	    public Playlist() {
+	        songs = new Vector<>();
+	    }
+
+	    public void addSong(String songName) {
+	        songs.add(songName);
+	    }
+
+	    public void displayPlaylist() {
+	        System.out.println("Current Playlist:");
+	        for (String song : songs) {
+	            System.out.println(song);
+	        }
+	    }
+
+	    public void removeSong(String songName) {
+	        songs.remove(songName);
+	    }
+	}
+
